@@ -1,0 +1,132 @@
+<apex:page renderAs="pdf" showHeader="false" applyHtmlTag="false" applyBodyTag="false" controller="Pdf">
+    <head>
+        <style type="text/css" media="print">  
+            @page :first {
+            @top-center {
+            content: element(header);
+            }
+            @bottom-left {
+            content: element(footer);
+            }
+            }
+            @page {
+            @top-center {
+            content: element(header2);
+            }
+            @bottom-left {
+            content: element(footer);
+            }
+            }
+            div.header {
+            padding: 10px;
+            position: running(header);
+            }
+            div.header2 {
+            padding: 10px;
+            position: running(header2);
+            }
+            div.footer {
+            display: block;
+            padding: 5px;
+            position: running(footer);
+            }
+            .pagenumber:before {
+            content: counter(page);
+            }
+            .pagecount:before {
+            content: counter(pages);
+            }
+            body { font-family: 'Arial Unicode MS'; }
+       
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}     
+.bottom-right {
+  position: absolute;
+  bottom: 30px;
+  right: 5px;
+            font-size: small;
+            border-bottom: 5px double red;
+
+  }
+   
+.bottom-left {
+  position: absolute;
+  bottom: 30px;
+  left: -10px;
+  }
+
+        </style>
+    </head>
+    <div class="header">
+        <apex:image value="{!$Resource.CartoonTurbines}" width="816" style="margin-top: -10px; margin-left: -58px;"/>
+    </div>
+    <div class="header2">
+        <apex:image value="{!$Resource.Foliage2}" width="816" style="margin-top: -10px; margin-left: -58px;"/>
+        <div>Account name is: {Account.name} ----------- and the date is {!TODAY()}</div>
+    </div>
+    <div class="footer">
+    
+<div class="container">
+        <apex:image value="{!$Resource.Foliage}" height="262" style="margin-top: -200px; margin-left: -54px;"/>
+  <div class="bottom-right">
+      Page <span class="pagenumber"/> of <span class="pagecount"/>
+  </div>
+  </div>
+    </div>
+    <div class="content">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+<span style="float: right;">
+<apex:image value="{!$Resource.VestasLogo}" height="40" style=""/>
+        <br/>
+      Wind. It means the world to us.™
+</span>
+      
+        <h1><span style="font-weight: bold; font-family: sans-serif;">Daily Report </span><span style="font-size: small; color: gray;">31 January 2025</span></h1>
+        <p style="margin-top: -20px;">Rush Creek Wind Farm I and II&nbsp;<apex:image value="{!$Resource.UK}" height="14" style=""/></p>
+        <p>Actual page body information.</p>
+            これはサンプルページです。<br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi risus, commodo at lacus quis, sollicitudin laoreet dolor. Integer tortor urna, venenatis id odio sit amet, ultricies aliquet tellus. Suspendisse ut sapien lacus. Praesent efficitur arcu a libero pretium congue. In non pellentesque ipsum. Maecenas venenatis neque nulla, sit amet pellentesque ligula iaculis id. Donec sollicitudin elit a quam finibus, ut feugiat justo iaculis. Donec varius maximus lacus, sit amet euismod justo scelerisque ac. Pellentesque tristique neque bibendum sem convallis volutpat. Sed gravida, sem id bibendum faucibus, nulla tortor aliquam justo, id auctor tellus turpis vel mi. Maecenas quis quam ut eros congue ultricies eu in orci. Quisque egestas in ante eget dapibus. Mauris malesuada purus nulla, consequat venenatis tortor maximus non. Vivamus consequat non est nec elementum. Vestibulum tempus, ipsum id semper bibendum, purus tellus viverra lectus, vitae pellentesque dolor est in elit. Phasellus accumsan placerat ultricies.
+        
+        Sed ac lorem scelerisque, commodo mi eget, volutpat dui. Proin finibus luctus dui, at consequat augue accumsan tempor. Nulla sit amet massa at velit rutrum sagittis. Vestibulum sagittis nec turpis vel placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies ultricies metus, id efficitur nunc iaculis vitae. Suspendisse potenti. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        
+        Sed nec vulputate ligula, a rhoncus sem. Maecenas sodales diam orci. Donec luctus dolor faucibus orci porttitor, rutrum consequat sapien elementum. Vestibulum convallis accumsan odio ut dictum. Vivamus molestie est libero, ac ultricies ante rhoncus at. Donec vitae est posuere, dignissim felis et, venenatis libero. Maecenas dignissim dictum augue vel bibendum. Donec dignissim faucibus nisl sagittis mattis. Morbi sed dui eget ante convallis iaculis. Donec non mauris non neque feugiat accumsan et sed ligula.
+        
+        Vestibulum condimentum sem ante, et tempor risus mattis ac. Quisque eget lobortis ipsum, sed sollicitudin sapien. Quisque tempor, velit nec pulvinar dictum, nisi nisi lobortis metus, at lacinia odio elit sit amet mauris. Nunc luctus leo id mi fringilla, non feugiat ante porta. Duis convallis feugiat odio, id vehicula sapien euismod eget. Sed ac turpis sit amet enim viverra tincidunt. Mauris et malesuada libero. In nec mi sagittis orci consequat finibus interdum eu ex. Nulla facilisis mollis purus, in vehicula leo facilisis et. Donec consectetur congue eleifend. Proin auctor sem nibh, eget iaculis augue viverra non. Sed non posuere enim. Nulla ex urna, scelerisque a commodo feugiat, elementum viverra quam. Etiam ut magna ac justo hendrerit vehicula et ut metus. Cras massa libero, tempus eget rhoncus pulvinar, congue vel odio. Fusce elementum ipsum vel feugiat lobortis.
+        
+        Donec nec ante felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed sit amet lobortis lacus, semper eleifend lorem. Aliquam semper velit volutpat dapibus dapibus. Sed nec pellentesque lorem. Donec eleifend lobortis erat, at fringilla ex sodales at. Suspendisse interdum at libero non pharetra.
+        
+        Sed vitae euismod dui, ut vehicula lacus. Morbi a efficitur ex, id finibus magna. Phasellus cursus aliquam consequat. Mauris nibh lorem, euismod vitae tristique non, convallis non urna. Sed sed enim eros. Pellentesque nunc nisl, condimentum at diam non, iaculis ultricies nisi. Nam cursus vitae lacus vitae sollicitudin.
+        
+        Duis auctor efficitur pretium. Duis nisl risus, mollis quis dolor a, vehicula scelerisque lorem. Phasellus ac ligula luctus, lacinia elit sollicitudin, ullamcorper nisl. Aenean a nisl in arcu maximus pharetra rutrum eget nulla. Nullam tincidunt non lorem quis pharetra. Donec tincidunt maximus mi congue efficitur. Donec at ultrices leo, sit amet pulvinar metus. Donec commodo luctus egestas. In tortor dui, gravida vitae mi vitae, euismod iaculis justo. Etiam a quam libero. In tristique risus ligula, sed facilisis est tempus vitae. Cras convallis nunc at nibh sagittis, non tincidunt metus consequat. Suspendisse ut lectus nec tellus volutpat fringilla eget molestie nulla. Sed in ipsum in est condimentum placerat. Etiam id augue est.
+        
+        Mauris porta massa id elementum rhoncus. Nulla eget faucibus orci. Quisque non pulvinar enim, sed volutpat dui. Curabitur laoreet nulla ut laoreet convallis. Sed venenatis luctus magna. Aenean viverra sollicitudin faucibus. Fusce pulvinar purus vel libero elementum euismod. Donec vestibulum ipsum eu elit maximus, quis ullamcorper ante consectetur. Phasellus luctus risus nulla, nec pretium nibh eleifend nec. Etiam id semper mi. Nunc facilisis est sed neque pretium, eget aliquam metus dignissim.
+        
+        Aenean malesuada turpis vitae hendrerit vehicula. Phasellus imperdiet dapibus nisi sed consectetur. Cras ullamcorper tortor iaculis dolor condimentum iaculis. Morbi mattis justo eu erat iaculis lobortis. Maecenas molestie leo ut dolor euismod, et pellentesque tortor lacinia. Nam pellentesque risus eget lectus efficitur pretium. Cras at urna ut mauris accumsan aliquam. Proin ac pulvinar lorem, ac tempus tellus. Vestibulum suscipit aliquet dolor, nec placerat mauris bibendum in. Cras felis dui, accumsan a urna vel, aliquam ornare quam. Etiam vitae tincidunt sapien, at aliquet dui. Pellentesque tristique vitae purus ac gravida. Sed fringilla nibh vitae ante malesuada, non lobortis ex facilisis.
+        
+        Vestibulum scelerisque rhoncus justo id blandit. Nulla rhoncus, tellus et pulvinar mollis, neque ipsum auctor mauris, sit amet gravida lorem lacus quis urna. Proin sit amet risus efficitur nibh aliquet ultrices aliquam ut tellus. Aliquam erat volutpat. Proin ac tellus non augue imperdiet lacinia. Vivamus at nibh eu turpis fringilla tempus quis sit amet mauris. Quisque fringilla consectetur orci, consectetur lobortis quam fermentum quis. Maecenas cursus augue vel hendrerit porta.
+        
+        Curabitur elementum libero quam, quis eleifend mauris placerat eu. Sed vestibulum, lorem id feugiat viverra, tellus ex rutrum urna, vitae dapibus nisi justo in lectus. Morbi dapibus quam velit, id malesuada nibh commodo nec. Vivamus quis libero sed enim malesuada aliquam id vestibulum quam. Quisque at libero eu massa placerat varius in eu odio. Aliquam id nunc purus. Morbi dolor elit, vehicula nec suscipit vitae, placerat pulvinar nulla. Nam semper in leo et congue. Donec non urna sit amet diam fringilla sollicitudin nec a enim. Praesent nunc elit, porta vitae ligula eu, feugiat tincidunt erat. Integer luctus leo eget tortor tempor interdum.
+        
+        Sed nisi sapien, pellentesque at leo vel, rhoncus aliquam erat. Fusce eget bibendum tortor. Nulla et fermentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi posuere ac felis sit amet pharetra. Nullam elementum tincidunt nulla suscipit ullamcorper. Suspendisse consectetur viverra dui. Integer tellus nibh, gravida id commodo mollis, molestie vitae enim. Vestibulum et feugiat nisl, sed euismod lorem. Sed lacinia viverra elit, eget porttitor mauris iaculis ac. Donec pellentesque dapibus tellus, sed ultricies nisi pulvinar non. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut neque tellus, iaculis ullamcorper mauris in, finibus fringilla mauris.
+        
+        Quisque quis auctor enim. Nullam imperdiet velit libero, a tempor lacus dapibus vitae. Sed malesuada ut enim vel pretium. Ut aliquam sapien risus, sit amet finibus metus faucibus et. Duis urna ligula, varius cursus rhoncus ut, malesuada eu erat. Sed sed pellentesque dui, at placerat orci. Curabitur mattis sagittis lacus, vel iaculis urna vestibulum sed.
+        
+        Sed ultrices tincidunt augue, sed egestas elit pharetra accumsan. Nunc ut est ullamcorper, cursus metus sed, finibus lectus. Phasellus blandit, risus vel pretium cursus, ex urna eleifend orci, id scelerisque neque erat nec odio. Sed vel arcu magna. Suspendisse ultricies ante vitae nulla semper, sed placerat eros gravida. Vestibulum facilisis sem est, et congue lorem tincidunt at. Nullam et risus maximus, luctus purus nec, tristique tortor.
+        
+        Duis sodales risus eu lacinia lobortis. Nullam porta, lacus ac scelerisque pellentesque, velit sem porttitor velit, ac semper ex urna nec diam. Curabitur interdum pellentesque vehicula. Donec vel faucibus nibh, id hendrerit risus. Vestibulum a mattis libero, imperdiet bibendum nunc. Integer imperdiet mauris sit amet ultricies blandit. Vivamus non efficitur quam. Nam nec aliquam leo, id finibus augue. Pellentesque ornare eget erat vitae ultrices. Ut a ultricies eros. Mauris commodo nulla et quam aliquet, ac semper leo sollicitudin. Mauris laoreet nisl eget scelerisque porta. Sed a blandit arcu. Duis pellentesque sed velit eget condimentum. Nunc tellus justo, dignissim quis cursus sed, maximus a nisl.
+        
+        
+    </div>
+</apex:page>
